@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fields name="thememagic" addfieldpath="/plugins/system/t3/includes/depend">
+		
+		<fieldset name="scaffolding_params" label="T3_TM_SCAFFOLDING">
+        
+        <field name="bodyBackground" type="color" default="" label="T3_TM_VARS_BODY_BKG_LABEL" description="T3_TM_VARS_BODY_BKG_DESC" />
+        <field name="textColor" type="color" default="" label="T3_TM_VARS_TEXT_COLOR_LABEL" description="T3_TM_VARS_TEXT_COLOR_DESC" />
+        <field name="linkColor" type="color" default="" label="T3_TM_VARS_LINK_COLOR_LABEL" description="T3_TM_VARS_LINK_COLOR_DESC" />
+      </fieldset>
+		<fieldset name="module_params" label="T3_TM_MODULE">
+        <field name="T3moduleBackground" type="color" default="" label="T3_TM_VARS_MODULE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_BGCOLOR_DESC" />
+        <field name="T3moduleColor" type="color" default="" label="T3_TM_VARS_MODULE_COLOR_LABEL" description="T3_TM_VARS_MODULE_COLOR_DESC" />
+        <field name="T3moduleTitleColor" type="color" default="" label="T3_TM_VARS_MODULE_TITLE_COLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_COLOR_DESC" />
+      </fieldset>
+
+		<fieldset name="module_hilite_params" label="T3_TM_MODULE_HILITE">
+        <field name="TPLmoduleBackgroundHilite1" type="color" default="" label="T3_TM_VARS_MODULE_HILITE1_LABEL" description="T3_TM_VARS_MODULE_HILITE1_DESC" />
+        <field name="TPLmoduleBackgroundHilite2" type="color" default="" label="T3_TM_VARS_MODULE_HILITE2_LABEL" description="T3_TM_VARS_MODULE_HILITE2_DESC" />
+        <field name="TPLmoduleBackgroundHilite3" type="color" default="" label="T3_TM_VARS_MODULE_HILITE3_LABEL" description="T3_TM_VARS_MODULE_HILITE3_DESC" />
+        <field name="TPLmoduleBackgroundHilite4" type="color" default="" label="T3_TM_VARS_MODULE_HILITE4_LABEL" description="T3_TM_VARS_MODULE_HILITE4_DESC" />
+        <field name="TPLmoduleBackgroundHilite5" type="color" default="" label="T3_TM_VARS_MODULE_HILITE5_LABEL" description="T3_TM_VARS_MODULE_HILITE5_DESC" />
+        <field name="TPLmoduleBackgroundHilite6" type="color" default="" label="T3_TM_VARS_MODULE_HILITE6_LABEL" description="T3_TM_VARS_MODULE_HILITE6_DESC" />
+        <field name="TPLmoduleBackgroundHilite7" type="color" default="" label="T3_TM_VARS_MODULE_HILITE7_LABEL" description="T3_TM_VARS_MODULE_HILITE7_DESC" />
+        <field name="TPLmoduleBackgroundHilite8" type="color" default="" label="T3_TM_VARS_MODULE_HILITE8_LABEL" description="T3_TM_VARS_MODULE_HILITE8_DESC" />
+      </fieldset>
+
+			<fieldset name="links_params" label="T3_THEMER_FOOTER">
+				<field name="T3FooterModuleTitleColor" type="color" default="" label="T3_VARS_FOOTER_MOD_TCOLOR_LABEL" description="T3_VARS_FOOTER_MOD_TCOLOR_DESC" />
+				<field name="T3FooterModuleColor" type="color" default="" label="T3_VARS_FOOTER_MOD_COLOR_LABEL" description="T3_VARS_FOOTER_MOD_COLOR_DESC" />
+        <field name="T3FooterModuleLinkColor" type="color" default="" label="T3_VARS_FOOTER_MOD_LINK_COLOR_LABEL" description="T3_VARS_FOOTER_MOD_LINK_COLOR_DESC" />
+        <field name="T3FooterModuleLinkColorHover" type="color" default="" label="T3_VARS_FOOTER_MOD_LINK_COLOR_HOVER_LABEL" description="T3_VARS_FOOTER_MOD_LINK_COLOR_HOVER_DESC" />        
+			</fieldset>
+
+
+	</fields>
+</form>

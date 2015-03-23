@@ -1,0 +1,128 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.ja-slidenews-item {
+  border: 0;
+	padding: 0;
+	float: left;
+	clear: both;
+	width: 100%;
+
+	&:hover {
+		.ja-title {
+	  	color: @linkColorHover;
+	  }
+
+	  .readon {
+		  background-position: left bottom;
+		}
+	}
+
+	img {
+	  border: 0;
+	  margin: 0;
+	  padding: 0;
+
+	  &[align="left"] {
+			float: left;
+			margin-right: 10px;
+			margin-left: 0;
+		}
+
+		&[align="right"] {
+			float: right;
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
+
+	.ja-title {
+	  color: @grayDark;
+	  font-family: 'open_sans_lightregular';
+	  font-size: 26px;
+	  font-weight: normal;
+	  line-height: @baseLineHeight + 10;
+	  margin: 20px 0;
+	  padding: 0 20px;
+
+	  &:hover, &:active, &:focus {
+	  	color: @linkColorHover;
+	  }
+	}
+
+	.content {
+	  padding: 0 20px 20px;
+	}
+
+	.ja-createdate {
+		color: #666;
+	  display: block;
+		font-size: 92%;
+		font-weight: bold;
+		padding: 2px 20px 2px 20px;
+	}
+
+	.readon {
+	  background: url(../images/readmore-bg-ltr.png) no-repeat left top;
+	  display: inline-block;
+	  height: 20px;
+	  position: absolute;
+	  left: 20px;
+	  bottom: 20px;
+	  width: 20px;
+	  text-indent: -999em;
+
+	  &:hover, &:active, &:focus {
+	  	background-position: left bottom;
+	  }
+	}
+}
+
+.ja-sidenews-title { font-weight:bold }
+
+.ja-sidenews-postdate { font-size:85%; }
+
+
+// STYLE FOR SIDENEWS LAYOUT 
+// ------------
+.ja-sidenews { 
+		width: 100%;
+		overflow: hidden; 
+		position: relative;
+		padding:0;
+		margin:0;
+		cursor:pointer;
+}
+
+.ja-sidenews-display {
+	position: absolute; 
+	top: 0;
+	z-index:1;
+	height: 100%;
+	width:100%
+}
+
+.ja-slidenews-cover h3 {
+  font-family: 'open_sans_semiboldregular';
+  font-size: @baseFontSize;
+  margin: 0;
+  padding: 10px 0;
+  line-height: (@baseLineHeight * 2);
+}
+
+.ja-sidenews-desc {
+	padding: 0px 20px;
+}
+
+.ja-slidenews-cover {
+		float: left; 
+		position: absolute; 
+		width: 100%;
+		z-index:3;
+		overflow: hidden;
+		left:0; 
+		bottom:0;	
+}

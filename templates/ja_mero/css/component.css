@@ -1,0 +1,56 @@
+
+
+body {
+  background: #fff;
+  border: 0;
+}
+#ja-mainbody {
+  margin: 0;
+  padding: 10px 0;
+}
+#ja-mainbody .ja-content {
+  padding: 20px;
+}
+#mailtoForm .inputbox
+#ja-mainbody #mailtoForm .inputbox {
+  width: 50%;
+}
+#mailtoForm .formelm label {
+  display: inline-block;
+}
+#mailtoForm p .button {
+  background: #444;
+  border: 1px solid #444;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 10px;
+  vertical-align: middle;
+}
+#mailtoForm p .button:hover {
+  background: #1ba1e2;
+  border: 1px solid #1ba1e2;
+}
+#mailtoForm .inputbox {
+  width: 60%;
+}
+#k2FrontendEditToolbar .icon-48-k2 {
+  background: url(../images/system/K2_Logo_105x40_24.png) no-repeat 0 50%;
+  display: inline-block;
+}
+a.itemPrintThisPage {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+a.itemPrintThisPage:hover,
+a.itemPrintThisPage:focus,
+a.itemPrintThisPage:active {
+  border-color: #999;
+}
+.edit .tab-content #images .modal {
+  position: inherit;
+  top: auto;
+  margin-left: 0;
+}
+

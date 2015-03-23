@@ -1,0 +1,162 @@
+//
+// MOBILE
+// -------------------------------------------------------------
+@media (max-width: 767px) {
+
+
+  // ------------------------------------------------------
+  // NAVIGATIONS ELEMENTS
+  // ------------------------------------------------------
+
+  // BREADCRUMBS
+  // -------------------------------------------------------
+  .ja-navhelper {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+
+  // -------------------------------------------------------
+  //  JA MAIN MENU
+  // -------------------------------------------------------
+  .ja-mainnav {
+    background: @navbarBackground;
+    border-top: 1px solid darken(@navbarBackground, 5%);
+    height: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .navbar-inner .span8 {
+    float: left;
+    width: 29% !important;
+  }
+
+  // Toggle Button
+  .ja-mainnav .navbar .btn-navbar {
+    background: lighten(@bodyBackground, 8%);
+    border: 0;
+    text-indent: -999em;
+    .box-shadow(none)
+  }
+
+  .ja-mainnav .navbar .btn-navbar .icon-bar {
+    background: lighten(@bodyBackground, 15%);
+  }
+
+  .ja-mainnav .navbar .btn-navbar:hover {
+    background: @linkColorHover;
+  }
+
+  .ja-mainnav .navbar .btn-navbar:hover .icon-bar {
+    background: @white;
+  }
+
+
+  // COLLAPSIBLE NAVBAR
+  // ----------------------------------------------------
+
+  // The nav
+  .ja-mainnav .nav-collapse {
+    background: @bodyBackground;
+    margin-top: (@baseLineHeight / 2);
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 30px !important;
+  }
+
+  .ja-mainnav .nav-collapse .nav {
+    margin: 0;
+  }
+
+  .ja-mainnav .nav-collapse .nav > li {
+  }
+
+  .ja-mainnav .nav-collapse .nav > li > a {
+    margin-bottom: 0;
+  }
+
+
+  // Nav and dropdown links in navbar
+  // -------------------------------
+  .ja-mainnav .nav-collapse .nav > li > a,
+  .ja-mainnav .nav-collapse .dropdown-menu a {
+    border-bottom: 1px solid lighten(@bodyBackground, 5%);
+    font-size: @baseFontSize;
+    padding: (@baseLineHeight / 2) @baseLineHeight;
+    text-shadow: none;
+    .border-radius(0);
+  }
+
+  .ja-mainnav .nav-collapse .dropdown-menu li + li a {
+    margin-bottom: 0;
+  }
+
+  // Hover state
+  .ja-mainnav .nav-collapse .nav > li > a:hover,
+  .ja-mainnav .nav-collapse .dropdown-menu a:hover {
+    background-color: lighten(@bodyBackground, 3%);
+  }
+
+
+  // dropdown links
+  // --------------
+  .ja-mainnav .nav-collapse .dropdown-menu a {
+    border-top: 1px solid lighten(@bodyBackground, 5%);
+    border-bottom: 0;
+    font-weight: normal;
+    padding: (@baseLineHeight / 2) (@baseLineHeight * 2);
+  }
+
+  // Hover state
+  .ja-mainnav .nav-collapse .dropdown-menu a:hover {
+    background-color: lighten(@bodyBackground, 5%);
+    color: @white;
+  }
+
+  .ja-mainnav .dropdown-menu .active > a {
+    background-color: lighten(@bodyBackground, 3%);
+    color: @linkColor;
+  }
+
+  .ja-mainnav .nav > li.dropdown.open.active > a:hover {
+    border-bottom: 1px solid lighten(@bodyBackground, 5%);
+  }
+
+  // Dropdowns in the navbar
+  // -----------------------
+  .ja-mainnav .nav-collapse .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    background-color: lighten(@bodyBackground, 3%);
+    border: none;
+    .border-radius(0);
+    .box-shadow(none);
+  }
+
+  // Hiding un-nessecary elements
+  .ja-mainnav .navbar .nav > li > .dropdown-menu {
+    &:before, &:after, .divider {
+      display: none;
+    }
+  }
+  
+  .customization {
+    display: none;
+  }
+
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a {
+    background-color: transparent !important;
+  }
+
+  .ja-mainnav .nav-collapse .nav > li > a, .ja-mainnav .nav-collapse .dropdown-menu a {
+    padding-left: 0;
+    &:hover {
+      background: none;
+    }
+  }
+
+}

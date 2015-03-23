@@ -1,0 +1,110 @@
+
+
+.ja-slidenews-item {
+  border: 0;
+  padding: 0;
+  float: right;
+  clear: both;
+  width: 100%;
+}
+.ja-slidenews-item:hover .ja-title {
+  color: #1ba1e2;
+}
+.ja-slidenews-item:hover .readon {
+  background-position: right bottom;
+}
+.ja-slidenews-item img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.ja-slidenews-item img[align="right"] {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+.ja-slidenews-item img[align="left"] {
+  float: left;
+  margin-right: 10px;
+  margin-left: 0;
+}
+.ja-slidenews-item .ja-title {
+  color: #444;
+  font-family: 'open_sans_lightregular';
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 30px;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+.ja-slidenews-item .ja-title:hover,
+.ja-slidenews-item .ja-title:active,
+.ja-slidenews-item .ja-title:focus {
+  color: #1ba1e2;
+}
+.ja-slidenews-item .content {
+  padding: 0 20px 20px;
+}
+.ja-slidenews-item .ja-createdate {
+  color: #666;
+  display: block;
+  font-size: 92%;
+  font-weight: bold;
+  padding: 2px 20px 2px 20px;
+}
+.ja-slidenews-item .readon {
+  background: url(../../images/readmore-bg-rtl.png) no-repeat right top;
+  display: inline-block;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 20px;
+  text-indent: -999em;
+}
+.ja-slidenews-item .readon:hover,
+.ja-slidenews-item .readon:active,
+.ja-slidenews-item .readon:focus {
+  background-position: right bottom;
+}
+.ja-sidenews-title {
+  font-weight: bold;
+}
+.ja-sidenews-postdate {
+  font-size: 85%;
+}
+.ja-sidenews {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.ja-sidenews-display {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.ja-slidenews-cover h3 {
+  font-family: 'open_sans_semiboldregular';
+  font-size: 13px;
+  margin: 0;
+  padding: 10px 0;
+  line-height: 40px;
+}
+.ja-sidenews-desc {
+  padding: 0px 20px;
+}
+.ja-slidenews-cover {
+  float: right;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+}
+

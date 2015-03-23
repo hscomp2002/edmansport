@@ -1,0 +1,43 @@
+@import "../fonts/open-sans/stylesheet.css";
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'open_sansregular', sans-serif;
+  font-size: 13px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div.error {
+  background: url(../images/error-bg.png) no-repeat 40px 40px #1ba1e2;
+  color: #fff;
+  margin: 100px auto 0;
+  padding: 40px 40px 40px 200px;
+  position: relative;
+  width: 300px;
+}
+
+div.error h1 {
+  font-family: 'open_sans_lightregular';
+  font-size: 60px;
+  margin: 0 0 10px;
+  padding: 0;
+  line-height: 1;
+}
+
+div.error .error-message {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+div.error #errorboxbody {
+  color: #acd5ff;
+}

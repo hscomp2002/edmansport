@@ -1,0 +1,261 @@
+body {
+  background: url(../../../images/themes/abstract/body-bg.png) no-repeat center top @bodyBackground;
+}
+
+
+//
+// GENERIC ARTICLE STYLES
+// ---------------------------------------------------------
+.page-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+// Page Subheader
+// --------------
+.page-subheader {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+// Divider
+.divider-vertical {
+  border-top: 1px solid #ddd;
+}
+
+.weblink-category ul li a:hover {
+  background-image: url(../../../images/themes/abstract/bullet-hover.png);
+}
+
+.readmore .btn:hover {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+
+// ---------------------------------------------------------
+// HEADER
+// ---------------------------------------------------------
+
+// Logo Text
+// ----------
+.logo-text h1 {
+	color: @white;
+}
+
+.logo-text h1 a {
+	color: @white;
+}
+
+// Taglines
+.logo-text .site-slogan {
+  display: block;
+  font-size: @baseFontSize;
+  margin-top: 5px;
+}
+
+// Head Search
+// -----------
+.head-search .search {
+  background: url(../../../images/themes/abstract/search-bg.png);
+}
+
+.head-search .input {
+  background: url(../../../images/themes/abstract/icon-search.png) no-repeat 210px 8px transparent;
+  border-color: #559176;
+  color: @white;
+}
+
+/* focus state */
+.head-search .input:focus {
+  background-image: url(../../../images/icon-search.png);
+  color: @grayDark;
+}
+
+
+//
+// DEFAULT JOOMLA! MENU 
+// ------------------------------------------------------
+.module_menu .nav > li {
+}
+
+
+// -------------------------------------------------------
+// JA MAIN MENU
+// -------------------------------------------------------
+.ja-mainnav .navbar-inner {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); //remove filter in IE
+}
+
+// Links
+// -----
+.ja-mainnav .navbar .nav > li > a {
+  color: @white;
+}
+
+// Shitty
+.input-append .add-on, .input-prepend .add-on {
+  background: #eee;
+}
+
+
+.nav-tabs.nav-stacked > li > a,
+.pagination a, .pagination span {
+  border-color: #444;
+}
+
+.pagination a:hover, .pagination .active a, .pagination .active span,
+.pagination a, .pagination span {
+  background: #444;
+}
+
+
+.btn { text-shadow: none;}
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+#ja-footer {
+  color: @T3FooterModuleColor;
+}
+
+#ja-footer .t3-module {
+  color: @T3FooterModuleColor;
+}
+
+// Foot Nav
+// --------
+.ja-fn {
+  border-top: 1px solid lighten(@bodyBackground, 10%);
+}
+
+.ja-copyright .container {
+  border-top: 1px solid lighten(@bodyBackground, 10%);
+}
+
+.ja-footnav li a {
+  color: @T3FooterModuleColor;
+}
+
+.ja-footnav li a:hover {
+    color: @T3FooterModuleLinkColorHover;
+}
+
+.copyright {
+  background: url(../../../images/themes/abstract/footer-logo.png) no-repeat left center;
+}
+
+.copyright a,
+.poweredby a {
+  color: lighten(@T3FooterModuleColor, 10%);
+}
+
+//Contact page
+div.login-wrap .other-links ul li a:hover,
+div.login-wrap .other-links ul li a:focus,
+div.login-wrap .other-links ul li a:active {
+  background-image: url(../../../images/themes/abstract/bullet-hover.png);
+}
+
+//Acymailing
+//-------------
+div.acymailing_form p.onefield .inputbox {
+  border: 1px solid lighten(@bodyBackground, 5%);
+  background: url(../../../images/themes/abstract/search-bg.png);
+  color: @T3FooterModuleColor;
+  .box-shadow(none);
+}
+
+div.acymailing_form p.onefield .inputbox:focus {
+  color: @grayDark;
+}
+
+div.acymailing_form p.acysubbuttons .button {
+  background-image: url(../../../images/themes/abstract/arrow-2.png);
+}
+
+.quick-contact p strong {
+  color: @T3FooterModuleColor;
+}
+
+//Social list
+//-----------
+ul.social-list li span {
+  background: url(../../../images/themes/abstract/icons-social.png);
+}
+
+ul.social-list li.twitter a:hover {
+  color: @cyan;
+}
+
+ul.social-list li.facebook a:hover {
+  color: #3b5998;
+}
+
+ul.social-list li.flickr a:hover {
+  color: @purple;
+}
+
+ul.social-list li.google a:hover {
+  color: @orange;
+}
+
+//Slideshow
+//---------
+div.ja-ss-thumbs .ja-ss-thumb {
+  background: url(../../../images/themes/abstract/sl-bullet.png) no-repeat left top;
+}
+
+//Content slider
+//--------------
+div.ja-contentslider-left,
+div.ja-contentslider-right {
+  background-image: url(../../../images/themes/abstract/btn-control.png);
+}
+
+//Sidenews module
+//---------------
+.ja-slidenews-item:hover .readon,
+.ja-slidenews-item .readon:hover {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+// ---------------------------------------------------------
+// K2
+// ---------------------------------------------------------
+//Category list
+//-------------
+div.subCategory .subCategoryMore {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+//Item list (category)
+//--------------------
+div.catItemReadMore a {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+//Item list (user)
+//----------------
+div.userItemReadMore a {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+//Item list (tag)
+//---------------
+div.tagItemReadMore a {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+//Item list (generic)
+//-------------------
+div.genericItemReadMore a:hover {
+  background-image: url(../../../images/themes/abstract/readmore-bg.png);
+}
+
+div.k2UserBlock ul.k2UserBlockActions li a:hover,
+div.k2UsersBlock ul li ul.ubUserItems li a:hover,
+div.k2LoginBlock ul li a:hover {
+  background-image: url(../../../images/themes/abstract/bullet-hover.png);
+}
+
+div.itemRelated ul li a:hover {
+  background-image: url(../../../images/themes/abstract/bullet-hover.png);
+}

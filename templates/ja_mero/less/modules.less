@@ -1,0 +1,363 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+
+//
+// GENECRIC MODULE STYLE
+// --------------------------------------------------
+.t3-module {
+  background: @T3moduleBackground;
+  color: @T3moduleColor;
+  min-height: @T3blockMinHeight;
+  margin-bottom: 10px;
+  position: relative;
+  //Module padding
+  .module-inner {
+    padding: @T3modulePadding;
+  }
+}
+
+
+// Module Title
+// ------------
+.module-title {
+  background: @T3moduleTitleBackground;
+  color: @T3moduleTitleColor;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  margin: 0;
+  padding: @T3moduleTitlePadding;
+}
+
+
+// Module Content
+// --------------
+.module-ct {
+  background: @T3moduleContentBackground;
+  color: @T3moduleContentColor;
+  padding: @T3moduleContentPadding 0 0;
+}
+
+
+// Module List
+// -----------
+.t3-module ul,
+.t3-module ol {
+  margin-left: 20px;
+}
+
+.t3-module ul.unstyled,
+.t3-module ol.unstyled,
+.t3-module ul.nav,
+.t3-module ol.nav {
+  margin-left: 0;
+}
+
+
+// Highlight module class suffix
+// -----------
+
+//No padding
+.module.no-padding .module-inner {
+  padding: 0;
+}
+
+.module.no-padding .module-ct {
+  padding: 0;
+}
+
+.module.no-bg {
+  background-color: transparent;
+}
+
+.module.height-auto {
+  min-height: 1px;
+}
+
+// Highlight 1
+.module.mod-hilite1 {
+  background: @TPLmoduleBackgroundHilite1;
+  color: @white;
+}
+
+.module.mod-hilite1 .module-title {
+  color: @white;
+}
+
+.module.mod-hilite1 a {
+  color: @white;
+}
+
+// Highlight 2
+.module.mod-hilite2 {
+  background: @TPLmoduleBackgroundHilite2;
+  color: @white;
+}
+
+.module.mod-hilite2 .module-title {
+  color: @white;
+}
+
+// Highlight 3
+.module.mod-hilite3 {
+  background: @TPLmoduleBackgroundHilite3;
+  color: @white;
+}
+
+.module.mod-hilite3 .module-title {
+  color: @white;
+}
+
+// Highlight 4
+.module.mod-hilite4 {
+  background: @TPLmoduleBackgroundHilite4;
+  color: @white;
+}
+
+.module.mod-hilite4 .module-title {
+  color: @white;
+}
+
+.module.mod-hilite4 a {
+  color: lighten(@TPLmoduleBackgroundHilite4, 40%);
+}
+
+.module.mod-hilite4 a:hover {
+  text-decoration: underline;
+}
+
+// Highlight 5
+.module.mod-hilite5 {
+  background: @TPLmoduleBackgroundHilite5;
+  color: @white;
+}
+
+.module.mod-hilite5 .module-title {
+  color: @white;
+}
+
+// Highlight 6
+.module.mod-hilite6 {
+  background: @TPLmoduleBackgroundHilite6;
+  color: @white;
+}
+
+.module.mod-hilite6 .module-title {
+  color: @white;
+}
+
+// Highlight 7
+.module.mod-hilite7 {
+  background: @TPLmoduleBackgroundHilite7;
+  color: @white;
+}
+
+.module.mod-hilite7 .module-title {
+  color: @white;
+}
+
+// Highlight 8
+.module.mod-hilite8 {
+  background: @TPLmoduleBackgroundHilite8;
+  color: @white;
+}
+
+.module.mod-hilite8 .module-title {
+  color: @white;
+}
+
+
+
+//
+// JOOMLA! MODULES
+// --------------------------------------------------
+
+
+// Login module
+// -------------
+#form-login-username #modlgn-username,
+#form-login-password #modlgn-passwd {
+  width: 80%;
+}
+
+
+// Advertisement
+// -------------
+.bannergroup {
+}
+
+.banneritem {
+  padding: @baseLineHeight/2 0;
+  border-top: 1px solid @T3borderColor;
+}
+
+.banneritem:first-child {
+  margin-top: @baseLineHeight/2;
+}
+
+.banneritem a {
+  font-weight: bold;
+}
+
+.bannerfooter {
+  border-top: 1px solid @T3borderColor;
+  font-size: @T3smallerFontSize;
+  padding-top: @baseLineHeight/2;
+  text-align: right;
+}
+
+
+// Categories
+// ----------
+.categories-module, ul.categories-module,
+.category-module, ul.category-module {
+  li {}
+  h4 {
+    font-size: @baseFontSize;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+
+// News Feed
+// ----------
+.feed {
+  // Feed Title
+  h4 {
+    font-weight: bold;
+  }
+  // Feed list
+  .newsfeed,
+  ul.newsfeed {
+    border-top: 1px solid @hrBorder;
+    li {}
+    .feed-link, 
+    h5.feed-link {
+      font-size: @baseFontSize;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+}
+
+ul.newsfeed {
+  border: 0 !important;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.newsfeed .newsfeed-item {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  padding: 0 0 10px 0;
+}
+
+ul.newsfeed .newsfeed-item:last-child {
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+// Latest Users 
+// ------------
+.latestusers,
+ul.latestusers {
+  margin-left: 0;
+  li {
+    background: @grayLighter;
+    display: inline-block;
+    padding: 5px 10px;
+    .border-radius (@inputBorderRadius);
+  }
+}
+
+
+// Stats 
+// ------------
+.stats-module {
+  dt, dd {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: bold;
+    width: 35%;
+  }
+  dd {
+    width: 60%;
+  }
+}
+
+// Popular Tags
+div.tagspopular ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+div.tagspopular ul li {
+  color: @gray;
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+
+div.tagspopular ul li a {
+  background: @grayLighter;
+  border-radius: 3px;
+  color: @gray;
+  display: block;
+  padding: 2px 5px;
+}
+
+div.tagspopular ul li a:hover,
+div.tagspopular ul li a:focus,
+div.tagspopular ul li a:active {
+  background: @linkColorHover;
+  color: @white;
+  text-decoration: none;
+}
+
+// Similar tags
+div.tagssimilar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.tagssimilar ul li {
+  border-bottom: 1px solid @grayLighter;
+  padding: 8px 0;
+}
+
+div.tagssimilar ul li a {
+  color: @gray;
+}
+
+div.tagssimilar ul li a:hover,
+div.tagssimilar ul li a:focus,
+div.tagssimilar ul li a:active {
+  color: @linkColorHover;
+}
+
+// Mod Languages
+.mod-languages {
+  float: right;
+}
+
+div.mod-languages ul.lang-inline li {
+  margin-left: 0;
+}
+
+// Preview Module Positions
+.mod-preview-info {
+  z-index: 1;
+}

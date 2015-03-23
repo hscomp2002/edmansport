@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Sabad">
+		<help
+			key = "Sabad_DESC"
+		/>
+		<message>
+			<![CDATA[Sabad_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_shop/models/fields"
+		>
+			<field name="id"
+				type="modal_sabad"
+				description="Sabad_SELECT_DESC"
+				label="Select Sabad"
+				required="true"
+			/>
+		</fieldset>
+	</fields>	
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+	</fields>
+</metadata>

@@ -1,0 +1,189 @@
+body {
+  background: @bodyBackground;
+}
+
+
+//
+// GENERIC ARTICLE STYLES
+// ---------------------------------------------------------
+.page-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+// Page Subheader
+// --------------
+.page-subheader {
+  border-bottom: 1px solid @grayDark;
+}
+
+// Divider
+.divider-vertical {
+  border-top: 1px solid #ddd;
+}
+
+
+// ---------------------------------------------------------
+// HEADER
+// ---------------------------------------------------------
+
+// Logo Text
+// ----------
+.logo-text h1 {
+	color: @grayDark;
+}
+
+.logo-text h1 a {
+	color: @grayDark;
+}
+
+// Taglines
+.logo-text .site-slogan {
+  display: block;
+  font-size: @baseFontSize;
+  margin-top: 5px;
+}
+
+// Head Search
+// -----------
+.head-search .input {
+  background: url(../../../images/themes/light/search-bg.png) no-repeat 210px 8px @white;
+  border-color: darken(@bodyBackground, 10%);
+  color: @grayDark;
+}
+
+/* focus state */
+.head-search .input:focus {
+  background-image: url(../../../images/icon-search.png);
+  color: @grayDark;
+}
+
+
+//
+// DEFAULT JOOMLA! MENU 
+// ------------------------------------------------------
+.module_menu .nav > li {
+}
+
+
+// -------------------------------------------------------
+// JA MAIN MENU (Inverted)
+// -------------------------------------------------------
+.ja-mainnav .navbar-inner {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); //remove filter in IE
+}
+
+// Links
+// -----
+.ja-mainnav .navbar .nav > li > a {
+  color: @gray;
+}
+
+// Active nav items
+.ja-mainnav .navbar .nav > .active > a,
+.ja-mainnav .navbar .nav > .active > a:hover,
+.ja-mainnav .navbar .nav > .active > a:focus {
+  color: @linkColorHover !important;
+}
+
+.ja-mainnav .navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.ja-mainnav .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.ja-mainnav .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-bottom-color: @linkColorHover;  
+  border-top-color: @linkColorHover;;
+}
+
+.ja-mainnav .navbar .nav > li > a:hover,
+.ja-mainnav .navbar .nav > li > a:focus,
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  color: @linkColorHover;
+}
+
+// Shitty
+.input-append .add-on, .input-prepend .add-on {
+  background: #eee;
+}
+
+
+.nav-tabs.nav-stacked > li > a,
+.pagination a, .pagination span {
+  border-color: #444;
+}
+
+.pagination a:hover, .pagination .active a, .pagination .active span,
+.pagination a, .pagination span {
+  background: #444;
+}
+
+
+.btn { text-shadow: none;}
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+#ja-footer {
+  color: @T3FooterModuleColor;
+}
+
+#ja-footer .t3-module {
+  color: @T3FooterModuleColor;
+}
+
+// Foot Nav
+// --------
+.ja-fn {
+  border-top: 1px solid darken(@bodyBackground, 10%);
+}
+
+.ja-copyright .container {
+  border-top: 1px solid darken(@bodyBackground, 10%);
+}
+
+.ja-footnav li a {
+  color: @T3FooterModuleColor;
+}
+
+.ja-footnav li a:hover {
+    color: @T3FooterModuleLinkColorHover;
+}
+
+.copyright {
+  background: url(../../../images/themes/light/footer-logo.png) no-repeat left center;
+}
+
+.copyright a,
+.poweredby a {
+  color: lighten(@T3FooterModuleColor, 10%);
+}
+
+.quick-contact p {
+  color: @T3FooterModuleTitleColor;
+}
+
+//Acymailing
+//-------------
+div.acymailing_form p.onefield .inputbox {
+  background: lighten(@bodyBackground, 10%);
+  border: 1px solid darken(@bodyBackground, 5%);
+  color: @T3FooterModuleColor;
+  .box-shadow(none);
+}
+
+div.acymailing_form p.onefield .inputbox:focus {
+  color: @grayDark;
+}
+
+div.acymailing_form p.acysubbuttons .button {
+  background-image: url(../../../images/themes/light/arrow-2.png);
+}
+
+.quick-contact p strong {
+  color: @T3FooterModuleColor;
+}
+
+//Social list
+//-----------
+ul.social-list li span {
+  background: url(../../../images/themes/light/icons-social.png);
+}

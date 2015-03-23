@@ -1,0 +1,193 @@
+
+
+#ja-contentsliderwrap {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+div.ja-wrap3 {
+  padding: 10px 0 0 0;
+}
+.ja-contentslider {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: auto !important;
+  width: 100%;
+  position: relative;
+}
+#ja-contentsliderwrap div.moduletable {
+  margin: 0;
+  padding: 0 !important;
+}
+.ja-contentslider-center {
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  overflow: hidden;
+}
+.ja-contentslider-center .jsslide {
+  overflow: hidden;
+}
+.ja-contentslider-center .ja_slideimages {
+  text-align: center;
+}
+.ja-contentslider-center .ja_slideimages img {
+  max-width: 100%;
+}
+div.ja_slidetitle {
+  padding: 20px 20px 10px;
+}
+div.ja_slidetitle a {
+  font-size: 16px;
+}
+.ja_slideintro {
+  padding: 0 20px;
+}
+div.ja-slidereadmore {
+  margin: 10px 0 0;
+  padding: 0 20px;
+}
+div.ja-slidereadmore a.readon {
+  background: url(../../images/readmore-bg.png) no-repeat right top;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  text-indent: -999em;
+}
+div.ja-slidereadmore a.readon:hover {
+  background-position: right bottom;
+}
+.ja-contentslider-center span {
+  width: 140px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.ja-contentslider-center img {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.ja-contentslider-center div.ja-image-holder {
+  background: #EBF2F6;
+  border: 1px solid #D5E2E7;
+  margin: 0;
+  padding: 3px;
+  overflow: hidden;
+}
+.ja-button-control {
+  background: #f5f5f5;
+  border-top: 1px solid #eee;
+  height: 40px;
+  position: relative;
+  width: 100%;
+}
+.ja-button-control .ja-text-heading {
+  font-weight: bold;
+  padding: 2px 5px;
+  float: right;
+}
+.ja-button-control a {
+  background: #000;
+  display: block;
+  float: right;
+  line-height: 20px;
+  margin-right: 5px;
+  margin-top: 2px;
+  padding: 0 5px;
+  background: #fff;
+  border: 1px solid #cfd9df;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.ja-button-control a:hover,
+.ja-button-control a:active,
+.ja-button-control a:focus {
+  text-decoration: none;
+  color: #fff;
+  background: #29739d;
+  border: 1px solid #215d7f;
+}
+.ja-button-control a.active {
+  text-decoration: none;
+  color: #fff;
+  background: #29739d;
+  border: 1px solid #215d7f;
+}
+.ja-contentslider-left,
+.ja-contentslider-right {
+  background-image: url(../../images/btn-control.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 20px;
+  left: 20px;
+  top: 10px;
+  width: 20px;
+}
+.ja-contentslider-left {
+  background-position: top right;
+  left: auto;
+  right: 20px;
+}
+.ja-contentslider-left:hover {
+  background-position: bottom right;
+  cursor: pointer;
+}
+.ja-contentslider-right {
+  background-position: top left;
+}
+.ja-contentslider-right:hover {
+  background-position: bottom left;
+  cursor: pointer;
+}
+.ja-button-control strong {
+  font-size: 110%;
+  padding-right: 20px;
+  line-height: 27px;
+  display: block;
+  float: right;
+}
+.tooltips .ja-cs-tooltips {
+  background: #fff !important;
+  border: 2px solid #ffcc66;
+  width: 200px;
+  padding: 10px;
+  box-shadow: 0 2px 5px #999;
+  -moz-box-shadow: 0 2px 5px #999;
+  -webkit-box-shadow: 0 2px 5px #999;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.tooltips .ja-cs-tooltips h3 {
+  background: #EBF2F6;
+  border-bottom: 1px solid #cfd9df;
+  color: #29739d;
+  font-size: 110%;
+  margin: -10px -10px 10px -10px;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 0 #fff;
+}
+.tooltips .ja-cs-tooltips ul li {
+  display: block;
+  font-size: 11px;
+}
+.tooltips .ja-cs-tooltips ul li.ja-rating-wrap strong {
+  display: block;
+  float: right;
+  margin-left: 5px;
+}
+.tooltips .ja-cs-tooltips .ja-item-rating {
+  background: url(../../images/stars.png) repeat-x right top;
+  float: right;
+  height: 20px;
+  width: 100px;
+}
+.tooltips .ja-cs-tooltips .ja-current-rating {
+  background: url(../../images/stars.png) repeat-x right center;
+  height: 20px;
+}
+

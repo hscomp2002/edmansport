@@ -1,0 +1,151 @@
+@import "../fonts/open-sans/stylesheet.css";
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'open_sansregular', sans-serif;
+  font-size: 13px;
+}
+
+img  {
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+h1 {
+  background: url(../images/logo-w.png) no-repeat left top;
+  font-family: 'open_sans_lightregular';
+  font-weight: normal;
+  margin: 0;
+  width: 151px;
+  height: 41px;
+  text-indent: -999em;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame {
+	margin: 100px auto 0;
+	width: 240px;
+}
+
+#frame form {
+	text-align: left;
+}
+
+/* -- class styles ---------------------------------- */
+
+.outline {
+  background: #1ba1e2;
+  color: #fff;
+  padding: 20px;
+}
+
+/* -- form styles ----------------------------------- */
+
+form {
+  margin: auto;
+}
+
+form p {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+form fieldset {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+}
+
+input {
+  border: 1px solid #0e85bf;
+  padding: 8px 10px;
+  width: 200px;
+}
+
+label {
+  margin: 5px 0px 2px 0px;
+}
+
+form br {
+  display: none;
+}
+
+#frmlogin	{
+  margin: 0 10px 0 10px;
+}
+
+#frmlogin fieldset.button {
+  text-align: right;
+}
+
+#form-login-remember label {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+input#remember {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  width: auto;
+}
+
+input.button {
+  background: #222;
+  border: 1px solid #222;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'open_sansregular', sans-serif;
+  font-size: 13px;
+  padding: 8px 10px;
+  width: auto;
+}
+
+input.button:hover {
+  background-color: #d21f45;
+  border-color: #d21f45;
+}
+
+/* -- RTL ----------------------------------- */
+html[dir="rtl"] #frame form {
+  text-align: inherit;
+}
+
+html[dir="rtl"] .alert .close {
+  left: 20px;
+  right: auto;
+}
+
+/* -- alert styles ----------------------------------- */
+.alert {
+  position: relative;
+}
+
+.alert,
+.alert h4 {
+  color: #f80;
+}
+
+.alert h4 {
+  margin: 0;
+}
+
+.alert .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  line-height: 20px;
+}

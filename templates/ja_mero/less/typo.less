@@ -1,0 +1,587 @@
+// --------------------------------------------------
+// TYPOGRAPHY
+// --------------------------------------------------
+
+
+// BODY TEXT
+// ------------------------------------------------------
+
+// Paragraphs
+// ----------
+p {
+  margin: 0 0 @baseLineHeight / 2;
+  small, .small {
+    font-size: @T3smallerFontSize;
+    color: @grayLight;
+  }
+}
+
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+
+
+// Emphasis & misc
+// ---------------
+
+small {
+  font-size: 85%; // Ex: 14px base font * 85% = about 12px
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+.muted {
+  color: @grayLight;
+}
+
+.highlight {
+  background-color: #FFC;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+
+
+// HEADINGS
+// ------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: (@baseLineHeight / 2) 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: 1;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
+}
+
+h1 {
+  font-size: @baseFontSize * 2.5;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: @baseFontSize * 2;
+  }
+}
+
+h2 {
+  font-size: @baseFontSize * 2; 
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: @baseFontSize * 1.5;
+  }
+}
+
+h3 {
+  font-size: @baseFontSize * 1.5; 
+  line-height: @baseLineHeight * 2; 
+  small {
+    font-size: @baseFontSize + 2px;
+  }
+}
+
+h4 {
+  font-size: @baseFontSize + 2px; 
+  line-height: @baseLineHeight;
+  small {
+    font-size: @baseFontSize;
+  }
+}
+
+h5 {
+  font-size: @baseFontSize + 1px; 
+  line-height: @baseLineHeight; 
+  small {
+    font-size: @baseFontSize - 2px;
+  }
+}
+
+h6 {
+  font-size: @baseFontSize; 
+  line-height: @baseLineHeight; 
+}
+
+
+
+// TITLES
+// ------------------------------------------------------
+
+// Page header
+// -----------
+.page-header {
+  border-bottom: 1px solid @T3borderColor;
+  padding-bottom: (@baseLineHeight / 2);
+  margin: 0 0 (@baseLineHeight);
+}
+
+.page-title,
+.page-header h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+
+// Page Subheader
+// --------------
+.page-subheader {
+  border-bottom: 1px solid @T3borderColor;
+  margin: 0 0 @baseLineHeight;
+  .clearfix();
+}
+
+.page-subtitle,
+.page-subheader h2 {
+  line-height: 1;
+  margin: 0;
+}
+
+.page-header + .page-subheader {
+  margin-top: -@baseLineHeight; //If there is page header, then omit the space before page subheader
+}
+
+
+// Article Header
+// --------------
+.article-header {
+}
+
+.article-title,
+.article-header h1, {
+  margin: 0 0 @baseLineHeight/2 0;
+  line-height: 1;
+}
+
+// Smaller "Article Title" in Blog and List layout
+h2.article-title,
+.article-header h2 {
+}
+
+
+// Item Header
+// -----------
+.item-title {
+  font-weight: bold;
+}
+
+
+
+// LISTS
+// ------------------------------------------------------
+
+// Unordered and Ordered lists
+// ---------------------------
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  line-height: @baseLineHeight;
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+
+// Description Lists
+// -----------------
+dl {
+  margin-bottom: @baseLineHeight;
+}
+
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: @baseLineHeight / 2;
+}
+
+// Horizontal layout (like forms)
+.dl-horizontal {
+  dt {
+    float: left;
+    width: 120px;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: 130px;
+  }
+}
+
+
+
+// MISC
+// ------------------------------------------------------
+
+// Horizontal rules
+// ----------------
+hr {
+  margin: @baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
+}
+
+
+// Abbreviations and acronyms
+// --------------------------
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayLight;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+// Blockquotes
+// -----------
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 @baseLineHeight;
+  border-left: 5px solid @grayLighter;
+  p {
+    margin-bottom: 0;
+    #font > .shorthand(16px,300,@baseLineHeight * 1.25);
+  }
+  small {
+    display: block;
+    line-height: @baseLineHeight;
+    color: @grayLight;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  // Float right with text-align: right
+  &.pull-right {
+    float: right;
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid @grayLighter;
+    border-left: 0;
+    p,
+    small {
+      text-align: right;
+    }
+    small {
+      &:before {
+        content: '';
+      }
+      &:after {
+        content: '\00A0 \2014';
+      }
+    }
+  }
+}
+
+
+// Quotes
+// ------
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+
+// Addresses
+// ---------
+address {
+  display: block;
+  margin-bottom: @baseLineHeight;
+  font-style: normal;
+  line-height: @baseLineHeight;
+}
+
+//Button animation.
+.btn-icon {
+  display: block;
+}
+
+.btn-big {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: @TPLgridRowHeight;
+  position: relative;
+  width: (@TPLgridColumnWidth * 3);
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.btn-icon span {
+  color: @white;
+  display: block;
+  font-family: 'open_sans_semiboldregular';
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.icon-contact {
+  background-image: url(../images/ico/mail-big.png);
+}
+
+.icon-photo {
+  background-image: url(../images/ico/photo-big.png);
+}
+
+//Social icon
+.social-wrap {
+	.btn-small {
+		background-color: @white;
+		background-position: top left;
+		background-repeat: no-repeat;
+		float: left;
+		height: 114px;
+		padding: 0;
+		text-indent: -999em;
+		width: 114px;
+		.border-radius(0px);
+		.transition(0.5s);
+	}
+
+	.icon-facebook {
+		background-image: url(../images/ico/facebook.png);
+		margin: 0 10px 10px 0;
+	}
+
+	.icon-facebook:hover,
+	.icon-facebook:focus,
+	.icon-facebook:active {
+		background-color: #3b5998;
+		background-position: left bottom;
+	}
+
+	.icon-google-plus {
+		background-image: url(../images/ico/google-plus.png);
+		margin: 0 0 10px 0;
+	}
+
+	.icon-google-plus:hover,
+	.icon-google-plus:focus,
+	.icon-google-plus:active {
+		background-color: #da5834;
+		background-position: left bottom;
+	}
+
+	.icon-twitter {
+		background-image: url(../images/ico/twitter.png);
+		margin: 0 10px 0 0;
+	}
+
+	.icon-twitter:hover,
+	.icon-twitter:focus,
+	.icon-twitter:active {
+		background-color: #02b3eb;
+		background-position: left bottom;
+	}
+
+	.icon-flicker {
+		background-image: url(../images/ico/flicker.png);
+		margin: 0;
+	}
+
+	.icon-flicker:hover,
+	.icon-flicker:focus,
+	.icon-flicker:active {
+		background-color: #e842a4; 
+		background-position: left bottom;
+	}
+}
+
+//Accodion module style
+.accordion-style {
+  height: 240px;
+  position: relative;
+}
+
+.accordion-style .content {
+  height: 56px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  .transition(0.5s);
+}
+
+.accordion-style .content h3 {
+  font-family: 'open_sans_semiboldregular';
+  font-size: @T3bigFontSize;
+  margin: 0;
+  padding: 20px 0;
+  line-height: 1;
+}
+
+.accordion-style .content p {
+  margin-bottom: 20px;
+}
+
+.accordion-style .content p.readmore {
+  margin-bottom: 0;
+  .clearfix();
+}
+
+.accordion-style .content p.readmore a {
+  background: url(../images/readon-w-bg.png) no-repeat left top;
+  display: block;
+  height: 20px;
+  width: 20px;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+.accordion-style .content p.readmore a:hover {
+  background-position: left bottom;
+}
+
+.accordion-style:hover .content {
+  height: 240px;
+}
+
+.accordion-style.mod-hilite1 .content {
+  background-color: @TPLmoduleBackgroundHilite1;
+  color: @white;
+}
+
+.accordion-style.mod-hilite2 .content {
+  background-color: @TPLmoduleBackgroundHilite2;
+  color: @white;
+}
+
+.accordion-style.mod-hilite3 .content {
+  background-color: @TPLmoduleBackgroundHilite3;
+  color: @white;
+}
+
+.accordion-style.mod-hilite4 .content {
+  background-color: @TPLmoduleBackgroundHilite4;
+  color: @white;
+}
+
+.accordion-style.mod-hilite5 .content {
+  background-color: @TPLmoduleBackgroundHilite5;
+  color: @white;
+}
+
+.accordion-style.mod-hilite6 .content {
+  background-color: @TPLmoduleBackgroundHilite6;
+  color: @white;
+}
+
+.accordion-style.mod-hilite7 .content {
+  background-color: @TPLmoduleBackgroundHilite7;
+  color: @white;
+}
+
+.accordion-style.mod-hilite8 .content {
+  background-color: @TPLmoduleBackgroundHilite8;
+  color: @white;
+}
+
+.accordion-style.mod-hilite1 .content h3,
+.accordion-style.mod-hilite2 .content h3,
+.accordion-style.mod-hilite3 .content h3,
+.accordion-style.mod-hilite4 .content h3,
+.accordion-style.mod-hilite5 .content h3,
+.accordion-style.mod-hilite6 .content h3,
+.accordion-style.mod-hilite7 .content h3,
+.accordion-style.mod-hilite8 .content h3 {
+  color: @white;
+}
+
+//Banner text style
+.banner-text h2 {
+  color: @T3FooterModuleTitleColor;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.banner-text p {
+  font-family: 'open_sans_semiboldregular';
+  color: @TPLbaseColor;
+  margin: 0;
+}
+
+//Custom badge style
+.module.badge-hot .module-inner {
+  position: relative;
+}
+
+.module .badge {
+  background-image: url(../images/badge-bg.gif);
+  background-repeat: no-repeat;
+  display: block;
+  color: @white;
+  height: 20px;
+  position: absolute;
+  padding: 0;
+  line-height: 1;
+  right: 0;
+  top: 0;
+  width: 35px;
+  .border-radius(0px);
+}
+
+.module.badge-hot .badge {
+  background-position: 0 0;
+}
+
+.module.badge-new .badge {
+  background-position: 0 -20px;
+}
+
+.module.badge-pick .badge {
+  background-position: 0 -40px;
+}
+
+.module.badge-top .badge {
+  background-position: 0 -60px;
+}
