@@ -9,6 +9,222 @@
 
 defined('_JEXEC') or die;
 
+
+/**
+ * 2972.ir SMS_Sender Class
+ * 
+ * @package		2972.ir 
+ * @copyright 	http://www.2972.ir
+ */
+class SMS_Sender
+{
+   /**
+    * Host
+    *
+    * @var	string
+    */
+    private $host = '2972.ir';
+    
+   /**
+    * URI
+    *
+    * @var	string
+    */
+    private $uri = '/api';
+    
+    /**
+     * This function is used to send SMS via socket.
+     * 
+     * @param   string      Username
+     * @param   string      Password
+     * @param   string      Number (From - Example: 100002972)
+     * @param   string      Recipient Number
+     * @param   integer     Port Number
+     * @param   string      Message
+     * @param   bool        Is Flash SMS?
+     * @return
+     */
+    private function Send_Via_Socket($username, $password, $number, $recipient, $port, $message, $flash)
+    {
+        $result = $response = '';
+        ############################# PARAMETERS #############################
+        $params = array(
+            'username'  => $username,
+            'password'  => $password,
+            'number'    => $number,
+            'recipient' => $recipient,
+            'port'      => $port,
+            'message'   => $message,
+            'flash'     => $flash
+        );
+        $parameters = '';
+        foreach ($params AS $name => $value) $parameters .= ($parameters != '' ? '&' : '') . "$name=" . urlencode($value);
+        ######################################################################
+        $sockerrno = 0;
+        $sockerr = ''; 
+        $socket = @fsockopen($this->host, 80, $sockerrno, $sockerr, 2);
+        if ($sockerr == '')
+        {
+            @fputs($socket, "POST $this->uri HTTP/1.1\nHost: $this->host\nContent-type: application/x-www-form-urlencoded\nContent-length: " . strlen($parameters) . "\nConnection: close\n\n$parameters");
+            $result = trim(fgets($socket));
+            while (!@feof($socket)) $response .= @fread($socket, 256);
+            @fclose($socket);
+            #################### SPLIT HEADER AND DOCUMENT BODY ##################
+            if ($result == 'HTTP/1.1 200 OK')
+            {
+                $hunks = explode("\r\n\r\n",trim($response));
+                if (!is_array($hunks) OR sizeof($hunks) < 2) return false;
+                else $response = $hunks[count($hunks) - 1];
+                if (preg_match('#(.+)[\r\n](.+)[\r\n](.+)#', $response, $match)) $response = $match[2];
+            }
+        }
+        else return false;
+        ######################################################################
+        return ($result == 'HTTP/1.1 200 OK') ? $response : false;
+    }
+    
+    /**
+    * This function allows class to set post values.
+    * 
+    * @param	string		Reference to options variable
+    * @param	array		Options array
+    *
+    */
+    private function curl_post_fields(&$options, $fields)
+    {
+    	$options[CURLOPT_POSTFIELDS] = $fields; 
+    }
+    
+    /**
+    * This function allows class to execute the given url and return result
+    * 
+    * @param	string		Reference to cURL handle
+    * @param	string		URL
+    * @param	array		Options for cURL transfer
+    * 
+    * @return	string
+    *
+    */
+    private function curl_execute(&$handle, $url, $options = null)
+    {
+    	if (!is_array($options))
+    	{
+    		$options = array();
+    	}
+    	else if (in_array(CURLOPT_POSTFIELDS, $options) AND sizeof($options[CURLOPT_POSTFIELDS]) > 0)
+    	{
+    		$options[CURLOPT_POST] = true;
+    	}
+    	
+    	$options[CURLOPT_USERAGENT] = 'PHP';
+    	$options[CURLOPT_RETURNTRANSFER] = true;
+    	$options[CURLOPT_URL] = $url;
+    	
+    	$handle = @curl_init(); // initialize cURL session
+        if ($handle AND @is_resource($handle))
+        {
+            @curl_setopt_array($handle, $options); // set options for cURL transfer 
+        	$result = @curl_exec($handle); // execute cURL session
+        	@curl_close($handle); // close cURL session
+        }
+        else
+        {
+            $result = false;
+        }
+    	
+    	return $result;
+    }
+    
+    /**
+     * This function is used to send SMS via cURL.
+     * 
+     * @param   string      Username
+     * @param   string      Password
+     * @param   string      Number (From - Example: 100002972)
+     * @param   string      Recipient Number
+     * @param   integer     Port Number
+     * @param   string      Message
+     * @param   bool        Is Flash SMS?
+     * @return
+     */
+    private function Send_Via_cURL($username, $password, $number, $recipient, $port, $message, $flash)
+    {
+        $handle = null;
+        $options = array();
+        $this->curl_post_fields($options, array(
+            'username'  => $username,
+            'password'  => $password,
+            'number'    => $number,
+            'recipient' => $recipient,
+            'port'      => $port,
+            'message'   => $message,
+            'flash'     => $flash
+        ));
+        return $this->curl_execute($handle, "http://www.$this->host{$this->uri}", $options);
+    }
+    
+    /**
+     * This function is used to send SMS via http://www.2972.ir
+     * 
+     * @param   string      Username
+     * @param   string      Password
+     * @param   string      Number (From - Example: 100002972)
+     * @param   string      Recipient Number
+     * @param   integer     Port Number
+     * @param   string      Message
+     * @param   bool        Is Flash SMS?
+     * @return
+     */
+    function Send($username, $password, $number, $recipient, $port, $message, $flash)
+    {
+        if (@function_exists('curl_init'))
+        {
+            $result = $this->Send_Via_cURL($username, $password, $number, $recipient, $port, $message, $flash);
+            if ($result !== '') return $result;
+        }
+        
+        return $this->Send_Via_Socket($username, $password, $number, $recipient, $port, $message, $flash);
+    }
+}
+
+/**
+ * This function is used to send SMS via http://www.2972.ir
+ * 
+ * @param   string      Username
+ * @param   string      Password
+ * @param   string      Number (From - Example: 100002972)
+ * @param   string      Recipient Number
+ * @param   string      Message
+ * @param   integer     Port Number (For Example: 1000)
+ * @param   bool        Is Flash SMS?
+ * @return
+ */
+function Send_SMS($username, $password, $number, $recipient, $message, $port = 0, $flash = false)
+{
+    $obj = new SMS_Sender;
+    $result = trim($obj->Send($username, $password, $number, $recipient, $port, $message, $flash));
+    unset($obj);
+    return ($result !== '') ? $result : '-24';
+}   
+function checkMobile($shomare)
+{
+    $out = FALSE;
+    $len = strlen($shomare);
+    $tell1 = substr($shomare,0,2);
+    $t = -1;
+    $j = 2;
+    for ($i = 0 ;$i <=9 ; $i ++)
+    {
+        if ((substr($shomare,$i+2,1)>0) || (substr($shomare,$i+2,1)<9))
+            $t = 1;
+    }
+    if (($tell1 == "09") && ($len == 11) && ($t == 1))
+            $out = TRUE;
+    else
+            $out = FALSE;
+    return($out);
+}
+
 /**
  * Registration model class for Users.
  *
@@ -64,13 +280,26 @@ class UsersModelRegistration extends JModelForm
 			$this->setError(JText::_('COM_USERS_ACTIVATION_TOKEN_NOT_FOUND'));
 			return false;
 		}
-
+                
 		// Load the users plugin group.
 		JPluginHelper::importPlugin('user');
 
 		// Activate the user.
 		$user = JFactory::getUser($userId);
-
+//----------------------------------------------------------------SMS--------------------------------------------------                
+                $sms_number = '';
+                if(strlen($user->username)==10)
+                    $sms_number = $user->username;
+                else if(strlen($user->username)==9)
+                    $sms_number = '0'.$user->username;
+                if(checkMobile($sms_number))
+                {
+                    $sms_body = $user->name.' ، '.'عضویت شما را به خانواده ورزشی ادمان اسپورت تبریک می گوییم.'."\n".'تماس :۰۹۱‍۵۵۲۲۲۵۷۵'."\n".'خانواده ادمان اسپرت';
+                    $result = Send_SMS('edman', 'elahe521390', '10009155222575', $sms_number, $sms_body, 0, false);
+                }
+                //file_put_contents("/var/www/html/edmansport/sms_test.txt", "Send Sms to ".var_export($user,TRUE)."\n".  var_export($result, TRUE));
+                
+//----------------------------------------------------------------SMS--------------------------------------------------
 		// Admin activation is on and user is verifying their email
 		if (($userParams->get('useractivation') == 2) && !$user->getParam('activate', 0))
 		{
